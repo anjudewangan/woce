@@ -1,0 +1,345 @@
+<?php
+include_once(dirname(__FILE__) . "/assets/includes/connection_inner.php");
+$blogDetail = $Q_obj->BlogViews($_GET['id']);
+if (count($blogDetail) == 0) {
+    echo "<script language=javascript>window.parent.location='blog.php';</script>";
+    exit;
+}
+$blogRecent = $Q_obj->RecentBlogs($_GET['id']);
+?>
+<!DOCTYPE html>
+<html lang="en" data-ng-app="website">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>WOCE | <?php echo stripslashes($blogDetail['title']); ?></title>
+    <link rel="icon" href="assets/image/logo/woce.png" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="Your gateway to circular wisdom. Explore stories that empower you to take action and co-create a sustainable world.">
+    <meta name="keywords" content="WOCE, Circular economy, Sustainable development, Resource management, Eco-friendly solutions, Green business, Sustainable production, Renewable energy, Sustainable consumption, Circular economy models, Circular cities, Sustainable entrepreneurship, Carbon dioxide (CO2), Carbon footprint, Carbon emissions, Carbon sequestration, Carbon capture and storage (CCS), Carbo neutrality, Carbon offsetting, Carbon pricing, Carbon credits, Carbon trading, Carbon reduction strategies, Carbon tax, Carbon-intensive industries, Carbon dioxide equivalent (CO2e), Carbon sinks, Carbon-based fuels, Carbon accounting, Carbon disclosure, Carbon management">
+    <meta property="og:image" content="assets/image/logo/woce.png">
+    <meta property="og:title" content="WOCE | <?php echo stripslashes($blogDetail['title']); ?>">
+    <meta property="og:description" content="Your gateway to circular wisdom. Explore stories that empower you to take action and co-create a sustainable world.">
+    <meta property="og:url" content="https://www.worldofcirculareconomy.com/">
+    <meta property="og:site_name" content="WOCE | <?php echo stripslashes($blogDetail['title']); ?>">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/fontawesome-webfont.woff">
+    <link rel="canonical" href="https://www.worldofcirculareconomy.com/blog-details.php" />
+    <link rel="stylesheet" href="assets/css/assets.min.css" />
+    <style>
+        @import url(//fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic|Oswald:regular,200,300,500,600,700&subset=latin,latin-ext,vietnamese,cyrillic);
+    </style>
+    <link rel="stylesheet" href="assets/css/styles.css" id="moto-website-style" />
+</head>
+
+<body class="moto-background moto-website_live">
+    <div class="page">
+    <header id="section-header" class="header moto-section" data-widget="section" data-container="section">
+        </header>
+        <section id="section-content" class="content page-3 moto-section" data-widget="section" data-container="section">
+            <div class="moto-widget moto-widget-row row-fixed row-gutter-0 moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="lala" style="background-image:url(https://img.freepik.com/premium-photo/classic-blue-background-exotic-leaves-is-painted-classic-blue-color_139863-92.jpg?w=740);background-position:center;background-repeat:no-repeat;background-size:cover;" data-bg-position="center">
+                <div class="container-fluid">
+                    <div class="row" data-container="container">
+                        <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+                            <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="sasa" data-animation="">
+                                <div class="moto-widget-text-content moto-widget-text-editable">
+                                    <h1 style="text-align: center;" class="moto-text_system_3"><?php echo stripslashes($blogDetail['title']); ?></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="moto-widget moto-widget-row row-fixed row-gutter-0 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="lala" data-bg-position="center">
+                <div class="container-fluid">
+                    <div class="row" data-container="container">
+                        <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+                            <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="sasa" data-animation="">
+                                <div class="moto-widget-text-content moto-widget-text-editable">
+                                    <ul class="collapsed">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
+                                        <!-- Title -->
+                                        <li><?php echo stripslashes($blogDetail['title']); ?></li>
+                                        <!-- Title -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto" data-widget="row" data-spacing="lama" data-bg-position="left top">
+                <div class="container-fluid">
+                    <div class="row" data-container="container">
+                        <div class="moto-cell col-sm-9 moto-widget moto-widget-row__column" data-container="container" data-widget="row.column" data-bg-position="left top">
+                            <div data-widget-id="wid__blog_post_list__5afd5a6e949b2" class="moto-widget moto-widget-blog-post_list moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="blog.post_list">
+                                <ul class="moto-blog-posts-list">
+                                    <li class="moto-blog-posts-list-item">
+                                        <article>
+                                            <div class="moto-widget moto-widget-row" data-widget="row">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="moto-cell col-sm-12" data-container="container">
+
+                                                            <!-- Title -->
+                                                            <div class="moto-widget moto-widget-text moto-preset-default moto-align-left  moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-preset="default" data-widget="text">
+                                                                <div class="moto-widget-text-content moto-widget-text-editable">
+                                                                    <h2 class="moto-text_222">
+                                                                        <?php echo stripslashes($blogDetail['title']); ?>
+                                                                    </h2>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Title-->
+
+                                                            <!-- Sub Title 1-->
+                                                            <?php
+                                                            if ($blogDetail['sub_title'] != '' || $blogDetail['sub_title'] != NULL) {
+                                                            ?>
+                                                                <div class="moto-widget moto-widget-text moto-preset-default moto-align-left  moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-preset="default" data-widget="text">
+                                                                    <div class="moto-widget-text-content moto-widget-text-editable">
+                                                                        <h3 class="moto-text_221">
+                                                                            <?php echo stripslashes($blogDetail['sub_title']); ?>
+                                                                        </h3>
+                                                                    </div>
+                                                                </div>
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                            <!-- Sub Title 1-->
+
+                                                            <div class="moto-widget moto-widget-row" data-widget="row">
+                                                                <div class="container-fluid">
+                                                                    <div class="row">
+                                                                        <div class="moto-cell col-sm" data-container="container">
+                                                                            <div data-widget-id="wid__blog_post_published_on__64394247f3651" class="moto-widget moto-widget-blog-post_published_on moto-preset-default moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto " data-preset="default" data-widget="blog.post_published_on" data-spacing="aasa" style="display: flex; justify-content: space-between;">
+                                                                                <div class="moto-text_219">
+                                                                                    <span class="fa fa-calendar moto-widget-blog-post_published_on-icon"></span><span class="moto-widget-blog-post_published_on-date">
+                                                                                        <?php echo date("d F, Y", strtotime($blogDetail['blog_date'])); ?>
+                                                                                    </span>
+                                                                                </div>
+
+                                                                                <!-- Author Name Start -->
+                                                                                <div class="moto-text_219">
+                                                                                    <?php if (!empty($blogDetail['author'])) { ?>
+                                                                                        <span class="fa fa-address-book moto-widget-blog-post_published_on-icon"></span><span class="moto-widget-blog-post_published_on-date">
+                                                                                            <?php echo $blogDetail['author']; ?>
+                                                                                        </span>
+                                                                                    <?php } ?>
+                                                                                </div>
+                                                                                <!-- Author Name End -->
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div data-widget-id="wid__image__64394247f37cc" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-3 moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image"><img src="<?php echo $blogDetail['blog_image']; ?>" class="moto-widget-deferred-content lazyload blog-image" data-id="" title="<?php echo stripslashes($blogDetail['title']); ?>" alt="<?php echo stripslashes($blogDetail['title']); ?>"></div>
+
+                                                            <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="sala" data-animation="" data-draggable-disabled="">
+                                                                <div class="moto-widget-text-content moto-widget-text-editable text-justify moto-text_normal">
+                                                                    <?php echo stripslashes($blogDetail['description']); ?>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Sub Title 2-->
+                                                            <?php
+                                                            if ($blogDetail['title2'] != '' || $blogDetail['title2'] != NULL) {
+                                                            ?>
+                                                                <div class="moto-widget moto-widget-text moto-preset-default moto-align-left  moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-preset="default" data-widget="text">
+                                                                    <div class="moto-widget-text-content moto-widget-text-editable">
+                                                                        <h4 class="moto-text_220">
+                                                                            <?php echo stripslashes($blogDetail['title2']); ?>
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                            <?php } ?>
+                                                            <!-- Sub Title 2-->
+
+                                                            <!-- Image 2 -->
+                                                            <?php
+                                                            if (file_exists($blogDetail['blog_image2'])) {
+                                                            ?>
+                                                                <div data-widget-id="wid__image__64394247f37cc" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-3 moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image">
+                                                                    <img src="<?php echo $blogDetail['blog_image2']; ?>" class="moto-widget-deferred-content lazyload blog-image" title="<?php echo stripslashes($blogDetail['title2']); ?>" alt="<?php echo stripslashes($blogDetail['title2']); ?>">
+                                                                </div>
+                                                            <?php } ?>
+                                                            <!-- Image 2 -->
+
+                                                            <?php
+                                                            if ($blogDetail['description2'] != '' || $blogDetail['description2'] != NULL) {
+                                                            ?>
+                                                                <!-- Description 2 -->
+                                                                <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="sala" data-animation="" data-draggable-disabled="">
+                                                                    <div class="moto-widget-text-content moto-widget-text-editable text-justify moto-text_normal">
+                                                                        <?php echo stripslashes($blogDetail['description2']); ?>
+                                                                    </div>
+                                                                </div>
+                                                            <?php } ?>
+                                                            <!-- Description 2 -->
+
+
+                                                            <!-- Sub Title 3-->
+                                                            <?php
+                                                            if ($blogDetail['title3'] != '' || $blogDetail['title3'] != NULL) {
+                                                            ?>
+                                                                <div class="moto-widget moto-widget-text moto-preset-default moto-align-left  moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-preset="default" data-widget="text">
+                                                                    <div class="moto-widget-text-content moto-widget-text-editable">
+                                                                        <h5 class="moto-text_216">
+                                                                            <?php echo stripslashes($blogDetail['title3']); ?>
+                                                                        </h5>
+                                                                    </div>
+                                                                </div>
+                                                            <?php } ?>
+                                                            <!-- Sub Title 3-->
+
+                                                            <!-- Image 3 -->
+                                                            <?php
+                                                            if (file_exists($blogDetail['blog_image3'])) {
+                                                            ?>
+                                                                <div data-widget-id="wid__image__64394247f37cc" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-3 moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image"><img src="<?php echo $blogDetail['blog_image3']; ?>" class="moto-widget-deferred-content lazyload blog-image" title="<?php echo stripslashes($blogDetail['title3']); ?>" alt="<?php echo stripslashes($blogDetail['title3']); ?>"></div>
+                                                            <?php } ?>
+                                                            <!-- Image 3 -->
+
+                                                            <!-- Description 3 -->
+                                                            <?php
+                                                            if ($blogDetail['description3'] != '' || $blogDetail['description3'] != NULL) {
+                                                            ?>
+                                                            <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="sala" data-animation="" data-draggable-disabled="">
+                                                                <div class="moto-widget-text-content moto-widget-text-editable text-justify moto-text_normal">
+                                                                <?php echo stripslashes($blogDetail['description3']); ?>
+                                                                </div>
+                                                            </div>
+                                                            <?php } ?>
+                                                            <!-- Description 3 -->
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="moto-cell col-sm-3 moto-widget moto-widget-row__column" data-container="container" data-widget="row.column" data-bg-position="left top">
+                            <div data-widget-id="wid_1575040381_oudq9dovw" class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="spacer" data-preset="default" data-spacing="aaaa" data-visible-on="+desktop,tablet,mobile-h,mobile-v">
+                                <div class="moto-widget-spacer-block" style="height:19px"></div>
+                            </div>
+                            <div id="wid_1575040348_bwu4aovey" class="moto-widget moto-widget-google-search-box moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-widget="google_search.box">
+                                <form class="moto-widget-google-search-box__form" action="blog.php" method="get" target="_self">
+                                    <div class="moto-form__element moto-form__element_input moto-form__element_field-with-button">
+                                        <div class="moto-form__field ">
+                                            <input class="moto-form__field-control moto-form__field-control_input moto-form__field-control_attachment" name="query" type="text" placeholder="Search..." value="" required>
+                                            <div data-widget-id="wid__button__64394248028f5" class="moto-widget moto-widget-button moto-preset-default moto-preset-provider-default moto-align-left moto-align-small_left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-widget="button">
+                                                <button type="submit" class="moto-widget-button-link moto-size-medium moto-link"><span class="fa moto-widget-theme-icon"></span><span class="moto-widget-button-divider"></span><span class="moto-widget-button-label">GO!</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <hr class="moto-widget-divider-line" style="max-width:100%;width:100%;">
+                            <div data-widget-id="wid__blog_recent_posts__5afd5a6ea2f6b" class="moto-widget moto-widget-blog-recent_posts moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto " data-widget="blog.recent_posts">
+                                <div class="moto-widget-blog-recent_posts-title">
+                                    <div class="moto-widget moto-widget-text moto-preset-default moto-align-left  moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-preset="default" data-spacing="aasa">
+                                        <div class="moto-widget-text-content moto-widget-text-editable">
+                                            <p class="moto-text_240">Recent Posts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="moto-widget moto-widget-row" data-widget="row">
+                                    <div class="container-fluid">
+                                        <div class="row moto-widget-blog-recent_posts-list">
+
+                                            <?php
+                                            if (count($blogRecent) > 0) {
+                                                foreach ($blogRecent as $recentBlog) {
+                                            ?>
+                                                    <div class="moto-cell col-sm-12 moto-widget-blog-recent_posts-item">
+                                                        <div class="moto-widget-blog-recent_posts-item__content  moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto">
+                                                            <div class="moto-widget-blog-recent_posts-item-preview">
+                                                                <div data-widget-id="wid__image__6439424804b24" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-3 moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="image">
+                                                                    <a href="blog-details.php?id=<?php echo $recentBlog['id']; ?>" data-action="url" class="moto-widget-image-link moto-link">
+                                                                        <img data-src="" src="<?php echo $recentBlog['blog_image']; ?>" class="moto-widget-deferred-content lazyload blog-img" data-id="" title="<?php echo stripslashes($recentBlog['title']); ?>" alt="<?php echo stripslashes($recentBlog['title']); ?>">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="moto-widget-blog-recent_posts-item-title">
+                                                                <div class="moto-widget moto-widget-text moto-align-left  moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-preset="default" data-spacing="aasa">
+                                                                    <div class="moto-widget-text-content moto-widget-text-editable">
+                                                                        <h2 class="blog-post-title moto-text_219">
+                                                                            <a href="blog-details.php?id=<?php echo $recentBlog['id']; ?>">
+                                                                            <?php echo stripslashes($recentBlog['title']); ?></a>
+                                                                        </h2>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            <?php }
+                                            } ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer id="section-footer" class="footer moto-section" data-widget="section" data-container="section">
+    </footer>
+    <div data-moto-back-to-top-button class="moto-back-to-top-button">
+        <a ng-click="toTop($event)" class="moto-back-to-top-button-link">
+            <span class="moto-back-to-top-button-icon fa"></span>
+        </a>
+    </div>
+    <script type="text/javascript" data-cfasync="false">
+        var websiteConfig = websiteConfig || {};
+        websiteConfig.relativeAddress = '/';
+        websiteConfig.addressHash = '83b9878aae843bac802aaed151ae15f1';
+        websiteConfig.apiUrl = 'api.html';
+        websiteConfig.preferredLocale = 'en_US';
+        websiteConfig.preferredLanguage = websiteConfig.preferredLocale.substring(0, 2);
+        websiteConfig.back_to_top_button = {
+            "topOffset": 300,
+            "animationTime": 500,
+            "type": "theme"
+        };
+        websiteConfig.popup_preferences = {
+            "loading_error_message": "The content could not be loaded."
+        };
+        websiteConfig.lazy_loading = {
+            "enabled": true
+        };
+        if (window.websiteConfig.lazy_loading && !window.websiteConfig.lazy_loading.enabled) {
+            window.lazySizesConfig = window.lazySizesConfig || {};
+            window.lazySizesConfig.preloadAfterLoad = true;
+        }
+    </script>
+    <script src="assets/js/website.assets.min.js" type="text/javascript" data-cfasync="false"></script>
+    <script type="text/javascript" data-cfasync="false">
+        angular.module('website.plugins', []);
+    </script>
+    <script src="assets/js/website.min.js" type="text/javascript" data-cfasync="false"></script>
+    <script type="text/javascript">
+        $.fn.motoGoogleMap.setApiKey('AIzaSyCPbz3W389x_owB2TlrqPuMEYCTFVuRvMY');
+    </script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/header-footer.js"></script>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPN589F6N3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZPN589F6N3');
+</script>
+</body>
+
+</html>

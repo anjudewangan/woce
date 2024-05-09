@@ -1,0 +1,6 @@
+#WOCE robots.txt
+
+User-agent: *
+Allow: / 
+Sitemap: https://www.worldofcirculareconomy.com/sitemap.html
+Sitemap: https://www.worldofcirculareconomy.com/sitemap.xml
