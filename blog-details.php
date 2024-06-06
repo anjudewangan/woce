@@ -11,13 +11,13 @@ $blogRecent = $Q_obj->RecentBlogs($_GET['id']);
 <html lang="en" data-ng-app="website">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>WOCE | <?php echo stripslashes($blogDetail['title']); ?></title>
-    <link rel="icon" href="assets/image/logo/woce.png" type="image/x-icon" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="icon" href="assets/image/logo/woce.webp" type="image/x-icon"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta name="description" content="Your gateway to circular wisdom. Explore stories that empower you to take action and co-create a sustainable world.">
     <meta name="keywords" content="WOCE, Circular economy, Sustainable development, Resource management, Eco-friendly solutions, Green business, Sustainable production, Renewable energy, Sustainable consumption, Circular economy models, Circular cities, Sustainable entrepreneurship, Carbon dioxide (CO2), Carbon footprint, Carbon emissions, Carbon sequestration, Carbon capture and storage (CCS), Carbo neutrality, Carbon offsetting, Carbon pricing, Carbon credits, Carbon trading, Carbon reduction strategies, Carbon tax, Carbon-intensive industries, Carbon dioxide equivalent (CO2e), Carbon sinks, Carbon-based fuels, Carbon accounting, Carbon disclosure, Carbon management">
-    <meta property="og:image" content="assets/image/logo/woce.png">
+    <meta property="og:image" content="assets/image/logo/woce.webp">
     <meta property="og:title" content="WOCE | <?php echo stripslashes($blogDetail['title']); ?>">
     <meta property="og:description" content="Your gateway to circular wisdom. Explore stories that empower you to take action and co-create a sustainable world.">
     <meta property="og:url" content="https://www.worldofcirculareconomy.com/">
@@ -25,12 +25,12 @@ $blogRecent = $Q_obj->RecentBlogs($_GET['id']);
     <meta property="og:type" content="website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/fontawesome-webfont.woff">
-    <link rel="canonical" href="https://www.worldofcirculareconomy.com/blog-details.php" />
-    <link rel="stylesheet" href="assets/css/assets.min.css" />
+    <link rel="canonical" href="https://www.worldofcirculareconomy.com/blog-details.php"/>
+    <link rel="stylesheet" href="assets/css/assets.min.css"/>
     <style>
         @import url(//fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic|Oswald:regular,200,300,500,600,700&subset=latin,latin-ext,vietnamese,cyrillic);
     </style>
-    <link rel="stylesheet" href="assets/css/styles.css" id="moto-website-style" />
+    <link rel="stylesheet" href="assets/css/styles.css" id="moto-website-style"/>
 </head>
 
 <body class="moto-background moto-website_live">
@@ -263,7 +263,7 @@ $blogRecent = $Q_obj->RecentBlogs($_GET['id']);
                                                             <div class="moto-widget-blog-recent_posts-item-preview">
                                                                 <div data-widget-id="wid__image__6439424804b24" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-3 moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="image">
                                                                     <a href="blog-details.php?id=<?php echo $recentBlog['id']; ?>" data-action="url" class="moto-widget-image-link moto-link">
-                                                                        <img data-src="" src="<?php echo $recentBlog['blog_image']; ?>" class="moto-widget-deferred-content lazyload blog-img" data-id="" title="<?php echo stripslashes($recentBlog['title']); ?>" alt="<?php echo stripslashes($recentBlog['title']); ?>">
+                                                                        <img data-src="<?php echo $recentBlog['blog_image']; ?>" src="<?php echo $recentBlog['blog_image']; ?>" class="moto-widget-deferred-content lazyload blog-img" data-id="" title="<?php echo stripslashes($recentBlog['title']); ?>" alt="<?php echo stripslashes($recentBlog['title']); ?>">
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -298,7 +298,7 @@ $blogRecent = $Q_obj->RecentBlogs($_GET['id']);
             <span class="moto-back-to-top-button-icon fa"></span>
         </a>
     </div>
-    <script type="text/javascript" data-cfasync="false">
+    <script data-cfasync="false">
         var websiteConfig = websiteConfig || {};
         websiteConfig.relativeAddress = '/';
         websiteConfig.addressHash = '83b9878aae843bac802aaed151ae15f1';
@@ -321,12 +321,12 @@ $blogRecent = $Q_obj->RecentBlogs($_GET['id']);
             window.lazySizesConfig.preloadAfterLoad = true;
         }
     </script>
-    <script src="assets/js/website.assets.min.js" type="text/javascript" data-cfasync="false"></script>
-    <script type="text/javascript" data-cfasync="false">
+    <script src="assets/js/website.assets.min.js" data-cfasync="false"></script>
+    <script data-cfasync="false">
         angular.module('website.plugins', []);
     </script>
-    <script src="assets/js/website.min.js" type="text/javascript" data-cfasync="false"></script>
-    <script type="text/javascript">
+    <script src="assets/js/website.min.js" data-cfasync="false"></script>
+    <script>
         $.fn.motoGoogleMap.setApiKey('AIzaSyCPbz3W389x_owB2TlrqPuMEYCTFVuRvMY');
     </script>
     <script src="assets/js/index.js"></script>

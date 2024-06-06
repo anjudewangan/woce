@@ -21,8 +21,8 @@ class sqlConnection
 
 	private function connectToDb()
 	{
-		$this->connection = new mysqli('localhost', 'woce_user', 'ecow%29!k871', 'woce_databse');
-		//$this->connection = new mysqli('localhost', 'root', '', 'woce_db');
+		// $this->connection = new mysqli('localhost', 'woce_user', 'ecow%29!k871', 'woce_databse');
+		$this->connection = new mysqli('localhost', 'root', '', 'woce_db');
 		if (mysqli_connect_error()) {
 			return "can not connect to database " . mysqli_connect_error();
 		}

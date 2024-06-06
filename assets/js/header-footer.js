@@ -24,7 +24,7 @@ document.getElementById(
                                       data-widget="image">
                                       <a href="index.html" data-action="page"
                                           class="moto-widget-image-link moto-link">
-                                          <img data-src="assets/image/logo/woce.png" src=""
+                                          <img data-src="assets/image/logo/woce.webp" src=""
                                               class="moto-widget-image-picture moto-widget-deferred-content lazyload"
                                               data-id="148" title="" alt="Woce Logo">
                                       </a>
@@ -47,7 +47,7 @@ document.getElementById(
                                                   PARTNER COMPANY</a></p>
                                       </div>
                                       <div class="side-logo">
-                                          <img data-src="" src="./assets/image/dashboard/side-logo.png"
+                                          <img data-src="" src="./assets/image/dashboard/side-logo.webp"
                                               class="moto-widget-image-picture moto-widget-deferred-content lazyload"
                                               data-id="148" title="" alt="Woce Logo">
                                       </div>
@@ -317,7 +317,7 @@ data-grid-type="sm" data-widget="row" data-spacing="mama" style="" data-bg-posit
                                                 data-widget="image">
                                                 <a href="index.html" data-action="page"
                                                     class="moto-widget-image-link moto-link">
-                                                    <img data-src="assets/image/logo/woce.png" src=""
+                                                    <img data-src="assets/image/logo/woce.webp" src=""
                                                         class="moto-widget-image-picture moto-widget-deferred-content lazyload"
                                                         data-id="148" title="" alt="Woce Image">
                                                 </a>
