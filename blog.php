@@ -2,34 +2,44 @@
 <html lang="en" data-ng-app="website">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow">
     <title>WOCE | WORLD OF CIRCULAR ECONOMY | Blog</title>
-    <link rel="icon" href="assets/image/logo/woce.webp" type="image/x-icon"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <meta name="description"
-        content="Explore the Sustainable Future: Dive into the World of Circular Economy - Discover insightful articles and resources on sustainable practices, innovation, and eco-friendly solutions at WorldOfCircularEconomy.com. Join us in shaping a greener tomorrow">
-    <meta name="keywords"
-        content="WOCE, Circular economy, Sustainable development, Resource management, Eco-friendly solutions, Green business, Sustainable production, Renewable energy, Sustainable consumption, Circular economy models, Circular cities, Sustainable entrepreneurship, Carbon dioxide (CO2), Carbon footprint, Carbon emissions, Carbon sequestration, Carbon capture and storage (CCS), Carbo neutrality, Carbon offsetting, Carbon pricing, Carbon credits, Carbon trading, Carbon reduction strategies, Carbon tax, Carbon-intensive industries, Carbon dioxide equivalent (CO2e), Carbon sinks, Carbon-based fuels, Carbon accounting, Carbon disclosure, Carbon management">
+    <link rel="icon" href="assets/image/logo/woce.webp" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="Explore the Sustainable Future: Dive into the World of Circular Economy - Discover insightful articles and resources on sustainable practices, innovation, and eco-friendly solutions at WorldOfCircularEconomy.com. Join us in shaping a greener tomorrow">
+    <meta name="keywords" content="WOCE, Circular economy, Sustainable development, Resource management, Eco-friendly solutions, Green business, Sustainable production, Renewable energy, Sustainable consumption, Circular economy models, Circular cities, Sustainable entrepreneurship, Carbon dioxide (CO2), Carbon footprint, Carbon emissions, Carbon sequestration, Carbon capture and storage (CCS), Carbo neutrality, Carbon offsetting, Carbon pricing, Carbon credits, Carbon trading, Carbon reduction strategies, Carbon tax, Carbon-intensive industries, Carbon dioxide equivalent (CO2e), Carbon sinks, Carbon-based fuels, Carbon accounting, Carbon disclosure, Carbon management">
     <meta property="og:image" content="assets/image/logo/woce.webp">
     <meta property="og:title" content="WOCE | WORLD OF CIRCULAR ECONOMY | Blog">
-    <meta property="og:description"
-        content="Explore the Sustainable Future: Dive into the World of Circular Economy - Discover insightful articles and resources on sustainable practices, innovation, and eco-friendly solutions at WorldOfCircularEconomy.com. Join us in shaping a greener tomorrow">
+    <meta property="og:description" content="Explore the Sustainable Future: Dive into the World of Circular Economy - Discover insightful articles and resources on sustainable practices, innovation, and eco-friendly solutions at WorldOfCircularEconomy.com. Join us in shaping a greener tomorrow">
     <meta property="og:url" content="https://www.worldofcirculareconomy.com/blog.php">
     <meta property="og:site_name" content="WOCE | WORLD OF CIRCULAR ECONOMY | Blog">
     <meta property="og:type" content="website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/fontawesome-webfont.woff">
-    <link rel="canonical" href="https://www.worldofcirculareconomy.com/blog.php"/>
-    <link rel="stylesheet" href="assets/css/assets.min.css"/>
+    <link rel="canonical" href="https://www.worldofcirculareconomy.com/blog.php" />
+    <link rel="stylesheet" href="assets/css/assets.min.css" />
     <style>
         @import url(//fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic|Oswald:regular,200,300,500,600,700&subset=latin,latin-ext,vietnamese,cyrillic);
     </style>
-    <link rel="stylesheet" href="assets/css/styles.css" id="moto-website-style"/>
+    <link rel="stylesheet" href="assets/css/styles.css" id="moto-website-style" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFE8Z0PWMX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HFE8Z0PWMX');
+    </script>
 </head>
 
 <body class="moto-background moto-website_live">
     <div class="page">
-    <header id="section-header" class="header moto-section" data-widget="section" data-container="section">
+        <header id="section-header" class="header moto-section" data-widget="section" data-container="section">
         </header>
         <section id="section-content" class="content page-3 moto-section" data-widget="section" data-container="section">
             <div class="moto-widget moto-widget-row row-fixed row-gutter-0 moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="lala" style="background-image:url(https://img.freepik.com/premium-photo/classic-blue-background-exotic-leaves-is-painted-classic-blue-color_139863-92.jpg?w=740);background-position:center;background-repeat:no-repeat;background-size:cover;" data-bg-position="center">
@@ -121,15 +131,15 @@
                                                                                                 <?php echo date("d F, Y", strtotime($record['blog_date'])); ?>
                                                                                             </span>
                                                                                         </div>
-                                                                                       <!-- Author Name Start -->
-                                                                                       <div class="moto-text_219">
-                                                                                       <?php if(!empty($record['author'])){ ?>
-                                                                                            <span class="fa fa-address-book moto-widget-blog-post_published_on-icon"></span><span class="moto-widget-blog-post_published_on-date">
-                                                                                                <?php echo $record['author']; ?>
-                                                                                            </span>
-                                                                                            <?php }?>
+                                                                                        <!-- Author Name Start -->
+                                                                                        <div class="moto-text_219">
+                                                                                            <?php if (!empty($record['author'])) { ?>
+                                                                                                <span class="fa fa-address-book moto-widget-blog-post_published_on-icon"></span><span class="moto-widget-blog-post_published_on-date">
+                                                                                                    <?php echo $record['author']; ?>
+                                                                                                </span>
+                                                                                            <?php } ?>
                                                                                         </div>
-                                                                                       <!-- Author Name End -->
+                                                                                        <!-- Author Name End -->
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -275,15 +285,18 @@
     </script>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/header-footer.js"></script>
-       <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPN589F6N3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPN589F6N3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-ZPN589F6N3');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZPN589F6N3');
+    </script>
 </body>
 
 </html>

@@ -11,10 +11,11 @@ $blogRecent = $Q_obj->RecentBlogs($_GET['id']);
 <html lang="en" data-ng-app="website">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow">
     <title>WOCE | <?php echo stripslashes($blogDetail['title']); ?></title>
-    <link rel="icon" href="assets/image/logo/woce.webp" type="image/x-icon"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link rel="icon" href="assets/image/logo/woce.webp" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="description" content="Your gateway to circular wisdom. Explore stories that empower you to take action and co-create a sustainable world.">
     <meta name="keywords" content="WOCE, Circular economy, Sustainable development, Resource management, Eco-friendly solutions, Green business, Sustainable production, Renewable energy, Sustainable consumption, Circular economy models, Circular cities, Sustainable entrepreneurship, Carbon dioxide (CO2), Carbon footprint, Carbon emissions, Carbon sequestration, Carbon capture and storage (CCS), Carbo neutrality, Carbon offsetting, Carbon pricing, Carbon credits, Carbon trading, Carbon reduction strategies, Carbon tax, Carbon-intensive industries, Carbon dioxide equivalent (CO2e), Carbon sinks, Carbon-based fuels, Carbon accounting, Carbon disclosure, Carbon management">
     <meta property="og:image" content="assets/image/logo/woce.webp">
@@ -25,17 +26,29 @@ $blogRecent = $Q_obj->RecentBlogs($_GET['id']);
     <meta property="og:type" content="website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/fontawesome-webfont.woff">
-    <link rel="canonical" href="https://www.worldofcirculareconomy.com/blog-details.php"/>
-    <link rel="stylesheet" href="assets/css/assets.min.css"/>
+    <link rel="canonical" href="https://www.worldofcirculareconomy.com/blog-details.php" />
+    <link rel="stylesheet" href="assets/css/assets.min.css" />
     <style>
         @import url(//fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic|Oswald:regular,200,300,500,600,700&subset=latin,latin-ext,vietnamese,cyrillic);
     </style>
-    <link rel="stylesheet" href="assets/css/styles.css" id="moto-website-style"/>
+    <link rel="stylesheet" href="assets/css/styles.css" id="moto-website-style" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFE8Z0PWMX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HFE8Z0PWMX');
+    </script>
 </head>
 
 <body class="moto-background moto-website_live">
     <div class="page">
-    <header id="section-header" class="header moto-section" data-widget="section" data-container="section">
+        <header id="section-header" class="header moto-section" data-widget="section" data-container="section">
         </header>
         <section id="section-content" class="content page-3 moto-section" data-widget="section" data-container="section">
             <div class="moto-widget moto-widget-row row-fixed row-gutter-0 moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="lala" style="background-image:url(https://img.freepik.com/premium-photo/classic-blue-background-exotic-leaves-is-painted-classic-blue-color_139863-92.jpg?w=740);background-position:center;background-repeat:no-repeat;background-size:cover;" data-bg-position="center">
@@ -208,11 +221,11 @@ $blogRecent = $Q_obj->RecentBlogs($_GET['id']);
                                                             <?php
                                                             if ($blogDetail['description3'] != '' || $blogDetail['description3'] != NULL) {
                                                             ?>
-                                                            <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="sala" data-animation="" data-draggable-disabled="">
-                                                                <div class="moto-widget-text-content moto-widget-text-editable text-justify moto-text_normal">
-                                                                <?php echo stripslashes($blogDetail['description3']); ?>
+                                                                <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="sala" data-animation="" data-draggable-disabled="">
+                                                                    <div class="moto-widget-text-content moto-widget-text-editable text-justify moto-text_normal">
+                                                                        <?php echo stripslashes($blogDetail['description3']); ?>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
                                                             <?php } ?>
                                                             <!-- Description 3 -->
 
@@ -272,7 +285,7 @@ $blogRecent = $Q_obj->RecentBlogs($_GET['id']);
                                                                     <div class="moto-widget-text-content moto-widget-text-editable">
                                                                         <h2 class="blog-post-title moto-text_219">
                                                                             <a href="blog-details.php?id=<?php echo $recentBlog['id']; ?>">
-                                                                            <?php echo stripslashes($recentBlog['title']); ?></a>
+                                                                                <?php echo stripslashes($recentBlog['title']); ?></a>
                                                                         </h2>
                                                                     </div>
                                                                 </div>
@@ -331,15 +344,18 @@ $blogRecent = $Q_obj->RecentBlogs($_GET['id']);
     </script>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/header-footer.js"></script>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPN589F6N3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPN589F6N3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-ZPN589F6N3');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZPN589F6N3');
+    </script>
 </body>
 
 </html>
