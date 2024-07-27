@@ -7257,6 +7257,22 @@ article .moto-spacing-bottom-small {
         width: 95vw
     }
 
+    .circle-ai-img {
+        display: block !important;
+    }
+
+    .timeline-container {
+        display: none;
+    }
+
+    .key-features-content h3 {
+        text-align: start !important;
+    }
+
+    .key-features-main-img {
+        display: none;
+    }
+
     .social {
         top: 14% !important
     }
@@ -7771,6 +7787,7 @@ article .moto-spacing-bottom-small {
         top: -60px;
     }
 }
+
 .ps-timeline-sec .container-fluid ol.ps-timeline {
     margin: 280px 0 215px 0;
     padding: 0;
@@ -7909,7 +7926,7 @@ article .moto-spacing-bottom-small {
 .ps-timeline-sec .container-fluid ol.ps-timeline li p {
     text-align: center;
     width: 100%;
-   margin-bottom: 60px;
+    margin-bottom: 60px;
     color: #fff;
     font-weight: 400;
     font-style: normal;
@@ -7941,15 +7958,15 @@ article .moto-spacing-bottom-small {
     width: 50px;
 }
 
-.key-features-main-img {
-    width: 380px;
-}
-
 .key-features-icon {
     display: flex;
     justify-content: start;
 }
 
-.key-features-content h3{
+.key-features-content h3 {
     text-align: end;
+}
+
+.circle-ai-img {
+    display: none;
 }
