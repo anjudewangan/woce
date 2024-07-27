@@ -118,9 +118,8 @@ document.getElementById(
                                           </a>
                                           <ul class="moto-widget-menu-sublist">
                                               <li class="moto-widget-menu-item">
-                                                  <a href="carbon-ledger.html" data-action="page"
-                                                      class="moto-widget-menu-link moto-widget-menu-link-level-3 moto-link">Carbon
-                                                      Ledger</a>
+                                                  <a href="esgpro-ai.html" data-action="page"
+                                                      class="moto-widget-menu-link moto-widget-menu-link-level-3 moto-link">esgpro.ai</a>
                                               </li>
                                               <li class="moto-widget-menu-item">
                                                   <a href="carbon-certificate-management.html"
@@ -249,8 +248,11 @@ document.getElementById(
                               class="moto-widget-social-links-extended__item moto-widget-social-links-extended__item-2">
                               <a href="https://twitter.com/wocenetzero"
                                   class="moto-widget-social-links-extended__link" target="_blank">
-                                  <span class="moto-widget-social-links-extended__icon fa"><i
-                                          class="fa fa-twitter" aria-hidden="true"></i></span>
+                                  <span class="moto-widget-social-links-extended__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+            </svg>
+            </span>
                               </a>
                           </li>
                           <li
@@ -364,8 +366,11 @@ data-grid-type="sm" data-widget="row" data-spacing="mama" style="" data-bg-posit
                                             <a href="https://twitter.com/wocenetzero"
                                                 class="moto-widget-social-links-extended__link"
                                                 target="_blank">
-                                                <span class="moto-widget-social-links-extended__icon fa"><i
-                                                        class="fa fa-twitter" aria-hidden="true"></i></span>
+                                                <span class="moto-widget-social-links-extended__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+            </svg>
+                                                </span>
                                             </a>
                                         </li>
                                         <li
@@ -416,10 +421,8 @@ data-grid-type="sm" data-widget="row" data-spacing="mama" style="" data-bg-posit
                                         data-widget="text" data-preset="default" data-spacing="sasa"
                                         data-animation="">
                                         <div class="moto-widget-text-content moto-widget-text-editable">
-                                            <p class="moto-text_system_12"><a href="carbon-ledger.html"
-                                                    data-action="" data-id="3" class="moto-link">Carbon
-                                                    Ledger
-                                                </a>
+                                            <p class="moto-text_system_12"><a href="esgpro-ai.html"
+                                                    data-action="" data-id="3" class="moto-link">esgpro.ai</a>
                                             </p>
                                         </div>
                                     </div>
