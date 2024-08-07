@@ -7669,7 +7669,7 @@ article .moto-spacing-bottom-small {
 }
 
 /* Timeline */
-.timeline-container {
+/* .timeline-container {
     width: 100%;
     position: relative;
     background-image: url('../image/carbon-book/key-features-bg.webp');
@@ -7686,7 +7686,7 @@ article .moto-spacing-bottom-small {
     right: 0px;
     bottom: 0px;
     background-color: rgba(0, 0, 0, 0.8);
-}
+} */
 
 .ps-timeline-sec {
     position: relative;
