@@ -6982,12 +6982,12 @@ article .moto-spacing-bottom-small {
 }
 
 .swiper,
-.swiper-slide video {
+.swiper-slide video, .swiper-slide img{
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
-.swiper-slide video {
+.swiper-slide video, .swiper-slide img {
     object-fit: inherit
 }
 
@@ -7346,7 +7346,7 @@ article .moto-spacing-bottom-small {
         height: 145px !important
     }
 
-    .swiper-slide video {
+    .swiper-slide video, .swiper-slide img {
         max-width: 100%;
         height: auto !important
     }
@@ -7366,7 +7366,7 @@ article .moto-spacing-bottom-small {
     }
 
     .announcement-container {
-        margin-top: -124px !important
+        margin-top: -150px !important
     }
 
     .product-btn {
@@ -7563,7 +7563,7 @@ article .moto-spacing-bottom-small {
         font-size: 14px
     }
 
-    .swiper-slide video {
+    .swiper-slide video, .swiper-slide img {
         height: auto
     }
 
